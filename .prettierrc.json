@@ -7,5 +7,13 @@
   "arrowParens": "always",
   "trailingComma": "all",
   "bracketSameLine": true,
-  "printWidth": 80
+  "printWidth": 80,
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
