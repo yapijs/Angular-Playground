@@ -20,7 +20,7 @@
         "padding-line-between-statements": [
           "error",
           {
-            "blankLine": "allways",
+            "blankLine": "always",
             "prev": "*",
             "next": [
               "multiline-block-like",
@@ -35,7 +35,7 @@
             ]
           },
           {
-            "blankLine": "allways",
+            "blankLine": "always",
             "prev": [
               "multiline-block-like",
               "return",
