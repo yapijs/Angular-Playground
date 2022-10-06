@@ -17,6 +17,49 @@
       ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "error",
+        "padding-line-between-statements": [
+          "error",
+          {
+            "blankLine": "allways",
+            "prev": "*",
+            "next": [
+              "multiline-block-like",
+              "return",
+              "if",
+              "block",
+              "block-like",
+              "const",
+              "let",
+              "class",
+              "function"
+            ]
+          },
+          {
+            "blankLine": "allways",
+            "prev": [
+              "multiline-block-like",
+              "return",
+              "if",
+              "block",
+              "block-like",
+              "const",
+              "let",
+              "class",
+              "function"
+            ],
+            "next": "*"
+          },
+          {
+            "blankLine": "never",
+            "prev": ["const"],
+            "next": ["const"]
+          },
+          {
+            "blankLine": "never",
+            "prev": ["let"],
+            "next": ["let"]
+          }
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
