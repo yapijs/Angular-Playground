@@ -7,13 +7,21 @@
   "arrowParens": "always",
   "trailingComma": "all",
   "bracketSameLine": true,
-  "printWidth": 80,
+  "printWidth": 100,
+  "endOfLine": "lf",
   "overrides": [
     {
-      "files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "files": ["**/*.html"],
       "options": {
         "singleQuote": false,
-        "htmlWhitespaceSensitivity": "ignore"
+        "htmlWhitespaceSensitivity": "ignore",
+        "printWidth": 80
+      }
+    },
+    {
+      "files": ["**/*.css", "**/*.scss"],
+      "options": {
+        "singleQuote": false
       }
     }
   ]
