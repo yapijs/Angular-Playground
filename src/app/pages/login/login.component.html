@@ -1,0 +1,94 @@
+<section class="login-section">
+  <div class="login-form-container">
+    <form *ngIf="loginForm" [formGroup]="loginForm" class="login-form">
+      <div class="login-form-header">
+        <span class="header-main-text">Welcome Back</span>
+        <span class="header-sub-text">Sign in to continue</span>
+      </div>
+
+      <div class="login-form-content">
+        <div class="profile-img-container">
+          <div
+            [ngStyle]="{ 'background-image': 'url(' + image + ')' }"
+            class="profile-img"></div>
+        </div>
+
+        <div class="form-field">
+          <label class="label" for="username">Username</label>
+          <input
+            formControlName="username"
+            class="input"
+            id="username"
+            type="text"
+            [ngClass]="{
+              'field-error':
+                loginForm.get('username')?.invalid &&
+                loginForm.get('username')?.touched
+            }"
+            placeholder="Enter username" />
+
+          <small
+            *ngIf="
+              loginForm.get('username')?.hasError('required') &&
+              loginForm.get('username')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+
+          <small
+            *ngIf="
+              loginForm.get('username')?.hasError('minlength') &&
+              loginForm.get('username')?.touched
+            "
+            class="error">
+            Value should be at least 3 characters long
+          </small>
+        </div>
+
+        <div class="form-field">
+          <label class="label" for="password">Password</label>
+          <input
+            formControlName="password"
+            class="input"
+            id="password"
+            type="password"
+            [ngClass]="{
+              'field-error':
+                loginForm.get('password')?.invalid &&
+                loginForm.get('password')?.touched
+            }"
+            placeholder="Enter password" />
+
+          <small
+            *ngIf="
+              loginForm.get('password')?.hasError('required') &&
+              loginForm.get('password')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+        </div>
+
+        <div class="checkbox-form-field">
+          <input formControlName="remember" id="remember" type="checkbox" />
+          <label for="remember">Remember Me</label>
+        </div>
+
+        <button
+          [disabled]="loginForm.invalid"
+          (click)="login()"
+          class="submit-button"
+          type="button">
+          Log In
+        </button>
+        <div class="login-form-recover-password">
+          <div class="login-form-recover-password-logo" >
+            <object data="/assets/images/login-form-recover-password-logo.svg"></object>
+          </div>
+          <div class="login-form-recover-password-text">Forgot your password?</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

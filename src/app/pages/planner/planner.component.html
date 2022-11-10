@@ -1,0 +1,29 @@
+<section class="planner-section">
+    <h1 class="planner-title">Planner page</h1>
+    <div class="planner-container">
+        <div class="planner">
+            <div class="planner-actions">
+                <input
+                  [(ngModel)]="inputValue"
+                  class="task-input"
+                  type="text"
+                  (keydown.enter)="addTask()"
+                  placeholder="Add new task..."/>
+                <button
+                  [disabled]="!inputValue"
+                  (click)="addTask()"
+                  class="task-add-btn">Add</button>
+            </div>
+            <div class="planner-tasks">
+                <div class="planner-task" *ngFor="let task of plannerTasks; let i = index">
+                    <input [(ngModel)]="task.done" type="checkbox"/>
+                    <p ngClass="{'planner-task-text' : task.done}"> {{ task.text }}</p>
+                    <button class="planner-task-delete" (click)="deleteTask(i)">x</button>
+                </div>
+            </div>
+            <div class="planner-summary">
+                <p>finished {{ finishedTaskCount }} of {{ plannerTasks.length }} tasks</p>
+            </div>
+        </div>
+    </div>
+</section>

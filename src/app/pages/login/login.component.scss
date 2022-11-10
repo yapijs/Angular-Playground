@@ -1,0 +1,127 @@
+.login-form-header {
+  background-color: rgba(85, 110, 230, 0.25);
+  border-radius: 4px 4px 0 0;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  font-style: normal;
+  color: #556EE6;
+  gap: 8px;
+  background-image: url("/assets/images/login-header.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.login-section {
+  padding: 20px;
+  background-color: #f0f4ef;
+}
+
+.login-form {
+  width: 450px;
+  background-color: white;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-main-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.header-sub-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.login-form-content {
+  padding: 80px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 13px;
+  color: #495057;
+}
+
+.submit-button {
+  padding: 8px 12px;
+  background-color: #556EE6;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #94a2ad;
+    cursor: not-allowed;
+  }
+}
+
+.profile-img-container {
+  position: absolute;
+  top: -20px;
+  left: 24px;
+}
+
+.profile-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #F8F8FB;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.error {
+  position: absolute;
+  bottom: -13px;
+  color: crimson;
+  font-size: 8px;
+}
+
+.input {
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  padding: 8px 12px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.field-error {
+    border-color: crimson;
+  }
+}
+
+.login-form-recover-password {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.login-form-recover-password {
+  color: #74788D;
+  font-weight: 400;
+  font-size: 13px;
+  padding-top: 24px;
+}

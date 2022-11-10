@@ -1,0 +1,27 @@
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #4b516e;
+  gap: 10px;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: deeppink;
+  }
+}
+
+.active {
+  color: white;
+  border-bottom: 2px solid white;
+
+  &:hover {
+    color: deeppink;
+    border-bottom: 2px solid deeppink;
+  }
+}
