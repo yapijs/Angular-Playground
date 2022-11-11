@@ -1,0 +1,102 @@
+<section class="contact-section">
+  <div class="contact-form-container">
+    <form
+      *ngIf="registrationForm"
+      [formGroup]="registrationForm"
+      class="contact-form">
+      <div class="login-form">
+        <div class="form-field">
+          <label class="input-label">Email</label>
+          <input
+            formControlName="email"
+            class="input-box"
+            type="email"
+            id="email"
+            placeholder="Email"
+            [ngClass]="{
+              'field-error':
+                registrationForm.get('email')?.invalid &&
+                registrationForm.get('email')?.touched
+            }" />
+          <small
+            class="error"
+            *ngIf="
+              registrationForm.get('email')?.hasError('required') &&
+              registrationForm.get('email')?.touched
+            ">
+            This field is required
+          </small>
+          <small
+            class="error"
+            *ngIf="registrationForm.get('email')?.hasError('email')">
+            Email is not valid
+          </small>
+        </div>
+        <div class="form-field">
+          <label class="input-label">Password</label>
+          <input
+            formControlName="password"
+            class="input-box"
+            type="password"
+            id="password"
+            placeholder="Password"
+            [ngClass]="{
+              'field-error':
+                registrationForm.get('password')?.invalid &&
+                registrationForm.get('password')?.touched
+            }" />
+          <small
+            class="error"
+            *ngIf="
+              registrationForm.get('password')?.hasError('required') &&
+              registrationForm.get('password')?.touched
+            ">
+            This field is required
+          </small>
+        </div>
+      </div>
+
+      <div class="switch-button-field">
+        <div class="switch-button">
+          <label for="isSubscribed" class="switch">
+            <input
+              formControlName="isSubscribed"
+              id="isSubscribed"
+              type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <span class="toggle-button-text">Subscribe to News</span>
+      </div>
+
+      <div class="form-buttons-section">
+        <button
+          [disabled]="registrationForm.invalid"
+          (click)="register()"
+          class="form-submit-button"
+          type="button">
+          Sign In
+        </button>
+        <span class="form-reset-section-text-1">Forgot your password?</span>
+        <div class="form-reset-section-break-div">
+          <hr class="form-reset-section-break" />
+        </div>
+        <div class="external-login-section">
+          <span class="form-reset-section-text-2">or continue with</span>
+          <div class="external-login-buttons">
+            <button class="external-login-button" type="button">
+              <object
+                class="google-icon"
+                data="/assets/images/google-icon.svg"></object>
+            </button>
+            <button class="external-login-button" type="button">
+              <object
+                class="facebook-icon"
+                data="/assets/images/facebook-icon.svg"></object>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
