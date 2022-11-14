@@ -12,6 +12,10 @@ export class HeaderComponent {
       title: 'Planner',
     },
     {
+      path: '/users',
+      title: 'Users',
+    },
+    {
       path: '/register',
       title: 'Register',
     },

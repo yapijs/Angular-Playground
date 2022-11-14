@@ -12,6 +12,7 @@ import { PlannerComponent } from './pages/planner/planner.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { UserCardComponent } from './pages/users/user-card/user-card.component';
 import { UsersComponent } from './pages/users/users.component';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UsersComponent } from './pages/users/users.component';
     RegistrationComponent,
     UsersComponent,
     UserCardComponent,
+    UserComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
